@@ -15,6 +15,11 @@ export default function App() {
       </Text>
       <Link href="/home/Home" >
         home</Link>
+    
+
+    <Link href="/movie/avengers">avengers</Link>
+
     </View>
+
   );
 }
