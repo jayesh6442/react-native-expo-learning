@@ -1,26 +1,20 @@
+import { Link } from "expo-router";
 import "./global.css"
-import { Text, TouchableHighlight, View } from "react-native";
+import { Text, View } from "react-native";
 
 export default function App() {
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-blue-500">
-        Welcome to Nativewind!
-      </Text>
       <Text
-      className="text-2xl font-bold mt-6 text-gray-800"
-      >
-        hi there 
+        className="
+      font-bold
+      text-4xl
+      
+      ">
+        Welcome
       </Text>
-      <TouchableHighlight
-      onPress={()=>{
-        alert('Hi');
-      }}
-      >
-        <Text>
-          one
-        </Text>
-      </TouchableHighlight>
+      <Link href="/home/Home" >
+        home</Link>
     </View>
   );
 }
