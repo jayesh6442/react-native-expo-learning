@@ -1,4 +1,3 @@
-import { Link } from "expo-router";
 import "./global.css"
 import { Text, View } from "react-native";
 
@@ -13,12 +12,6 @@ export default function App() {
       ">
         Welcome
       </Text>
-      <Link href="/home/Home" >
-        home</Link>
-    
-
-    <Link href="/movie/avengers">avengers</Link>
-
     </View>
 
   );
