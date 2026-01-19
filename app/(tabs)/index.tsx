@@ -1,18 +1,31 @@
 import "../global.css"
-import { Text, View } from "react-native";
+import { Image, ScrollView, View } from "react-native";
+import { images } from "@/constants/images";
+import { icons } from "@/constants/icons";
+import SearchBar from "@/components/SearchBar";
+import { useRouter } from "expo-router";
 
 export default function App() {
+  const router = useRouter()
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text
-        className="
-      font-bold
-      text-4xl
-      
-      ">
-        Welcome
-      </Text>
-    </View>
+    <View className="flex-1 bg-primary">
+      <Image
+        source={images.bg}
+        className="absolute w-full z-0"
+        resizeMode="cover"
+      />
 
+      <ScrollView
+        className="flex-1 px-5"
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ minHeight: "100%", paddingBottom: 10 }}
+      >
+        <Image source={icons.logo} className="w-12 h-10 mt-20 mb-5 mx-auto" />
+
+        <View>
+          <SearchBar placeholder="Search For Movie" onPress={() => { router.push("/(tabs)/search") }} />
+        </View>
+      </ScrollView >
+    </View>
   );
-}
+} 
